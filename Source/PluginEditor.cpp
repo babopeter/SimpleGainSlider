@@ -1,7 +1,11 @@
+// This is for the user interface
+
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
 //==============================================================================
+// This is the constructor, where we set the values for the visual elements
+// Gets called once, when the plugin is created
 GainTutorial20AudioProcessorEditor::GainTutorial20AudioProcessorEditor (GainTutorial20AudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
@@ -16,19 +20,27 @@ GainTutorial20AudioProcessorEditor::GainTutorial20AudioProcessorEditor (GainTuto
     setSize (200, 300);
 }
 
+// This is the destructor
+// Gets called when the plugin is closed
 GainTutorial20AudioProcessorEditor::~GainTutorial20AudioProcessorEditor()
 {
 }
 
 //==============================================================================
+// This is the paint function
+// Gets called periodically, refreshes the visual screen that the user sees
 void GainTutorial20AudioProcessorEditor::paint (Graphics& g)
 {
+    // Make the background black
     g.fillAll(Colours::black);
     
 }
 
+// Resized function
+// You can change the layout of the visual elements here
 void GainTutorial20AudioProcessorEditor::resized()
 {
+    // Draw the slider
     mGainSlider.setBounds(getWidth() / 2 - 50, getHeight() / 2 - 75, 100, 150);
 }
 

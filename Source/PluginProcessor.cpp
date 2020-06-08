@@ -1,3 +1,5 @@
+// This is where the audio processing happens
+
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
@@ -119,6 +121,7 @@ bool GainTutorial20AudioProcessor::isBusesLayoutSupported (const BusesLayout& la
 }
 #endif
 
+// This is where the magic happens
 void GainTutorial20AudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
     ScopedNoDenormals noDenormals;

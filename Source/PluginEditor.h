@@ -22,6 +22,7 @@ public:
     void sliderValueChanged (Slider* slider) override;
 
 private:
+    // Instantiating a the slider class ("m" - as it's a member variable: a variable that is associated with a specific object)
     Slider mGainSlider;
     
     GainTutorial20AudioProcessor& processor;
